@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Transfer file now</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="chose_t.js"></script>
+</head>
+
+<body>
+    <section class="wellcome_area clearfix" id="home">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-2 col-md">
+                    <div class="wellcome-heading">
+                        <h2>Markdown</h2>
+                        <p id="id_client"></p>
+                    </div >
+
+                    <style>
+                    
+                        textarea {
+                        width: 100%;
+                        height: 850px;
+                        padding: 12px 20px;
+                        box-sizing: border-box;
+                        border: 5px solid #ccc;
+                        border-radius: 4px;
+                        background-color: #f8f8f8;
+                        font-size: 30px;
+                        resize: none;
+                        font-family: Lato;
+                        margin-bottom: 26px ;
+                        }
+                    </style>
+                    <h3 id="template">chose a template</h3>
+
+                     <form class="form-inline">
+                        <input type="button" class="submit" value="Default" onclick="set_template_default()">
+                        <input type="button" class="submit" value="Stylized PDF" onclick="set_template_stylepdf()">
+                        <input type="button" class="submit" value="Power Point PDF" onclick="set_template_pp()">
+                        <input type="button" class="submit" value="LaTeX" onclick="set_template_latex()">
+                    </form>
+
+                     <form class="form-inline">
+                        <input type="button" class="submit" value="Set template" onclick="set_template()">
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="welcome-thumb">
+            <img id="qr" src="" width="60%">
+        </div>
+    </section>
+</body>
+</html>
