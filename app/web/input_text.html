@@ -38,11 +38,35 @@
                         margin-bottom: 26px ;
                         }
                     </style>
+
+                 <div class="get-start-area">               
+                     <form class="form-inline">
+                        <input type="button" class="submit" value="Title" onclick="title_()">
+                        <input type="button" class="submit" value="Subtitle" onclick="subtitle()">
+                        <input type="button" class="submit" value="Subsubtitle" onclick="subsubtitle()">
+                    </form>
+
+                     <form class="form-inline">
+                        <input type="button" class="submit" value="image" onclick="add_image()">
+                        <input type="button" class="submit" value="table" onclick="add_table()">
+                        <input type="button" class="submit" value="new line" onclick="new_line()">
+                    </form>
+
+                     <form class="form-inline">
+                        <input type="button" class="submit" value="indice" onclick="add_indice()">
+                        <input type="button" class="submit" value="header" onclick="add_header()">
+                    </form>
+
+                </div>
                 <footer class="major">
                         <textarea id="file_content"></textarea>
-                    </footer>
-                
-                <input type="button" class="submit" value="send file" onclick="send_filejs()">
+                </footer>
+                 <div class="get-start-area">               
+                     <form class="form-inline">
+                        <input type="button" class="submit" value="submit" onclick="send_filejs()">
+                    </form>
+                </div>
+
                 </div>
             </div>
         </div>
