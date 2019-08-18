@@ -5,7 +5,7 @@
     sudo apt install python3-pip
 
 2. Install Chrome or Chromium
-    sudo apt install Chromium
+    sudo apt-get install chromium-browser
 
 3. Install pandoc
     sudo apt install pandoc
