@@ -38,7 +38,7 @@ function new_line() {
 
 function add_indice() {
 	var text = document.getElementById("file_content").value
-	document.getElementById("file_content").value = text + "\n \\tableofcontents";
+	document.getElementById("file_content").value = text + "\n\\tableofcontents";
 }
 
 function add_header() {
