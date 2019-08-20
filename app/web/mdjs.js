@@ -34,7 +34,7 @@ function add_table() {
 
 function new_line() {
 	var text = document.getElementById("file_content").value;
-	document.getElementById("file_content").value = text + "\n \\newline \n";
+	document.getElementById("file_content").value = text + " \\newline\n";
 }
 
 function add_indice() {
@@ -44,6 +44,6 @@ function add_indice() {
 
 function add_header() {
 	var text = document.getElementById("file_content").value
-	document.getElementById("file_content").value = text + "---\n title: \"\"\n author: [Author Name]\n date: \"\"\n subject: \"Markdown\"\n keywords: [Markdown, Example]\n subtitle: \"\"\n lang: \"en\"\n titlepage: true\n titlepage-color: \"06386e\"\n titlepage-text-color: \"FFFFFF\"\n titlepage-rule-color: \"FFFFFF\"\n titlepage-rule-height: 1\n ...\n";
+	document.getElementById("file_content").value = text + "---\n title: \"\"\n author: [Author Name]\n date: \"\"\n subject: \"Markdown\"\n keywords: [Markdown, Example]\n subtitle: \"\"\n lang: \"en\"\n titlepage: true\n titlepage-color: \"06386e\"\n titlepage-text-color: \"FFFFFF\"\n titlepage-rule-color: \"FFFFFF\"\n titlepage-rule-height: 1\n---\n";
 }
 

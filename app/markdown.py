@@ -27,6 +27,9 @@ def dummy(dummy_param):
 def set_template(template):
     TEMPLATE = template
     print(TEMPLATE)
+    with open("template","w+") as fd:
+        fd.write(template)
+
     #eel.start('input_text.html', size=(1000, 600))
 
 def relaod_zathura(name_file):
@@ -44,24 +47,35 @@ def create_file(file_content):
     with open("web/markdowns/" + name_file + "md","w+") as fd:
         fd.write(file_content)
 
+    with open("template","r") as fd:
+        TEMPLATE = fd.read()
+
+    print(" TEMPLATE :: "+ TEMPLATE)
     """ DEFAULT """
     if (TEMPLATE == TEMPLATES[0]):
+        print("DEFAULT")
         os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
 
     # TODO
     """ Stylized PDF"""
     if (TEMPLATE == TEMPLATES[1]):
-        os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
+        print("Stylized PDF")
+        #os.system("pandoc -t html5 --css mdstyle.css web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
+        os.system("pandoc web/markdowns/"+name_file + "md -o web/pdfs/" + name_file + "pdf --from markdown --template eisvogel --listings")
 
     # TODO
     """ Power Point PDF"""
     if (TEMPLATE == TEMPLATES[2]):
-        os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
+        print("PP PDF")
+        #os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
+        os.system("pandoc -t beamer web/markdowns/"+name_file + "md -o web/pdfs/" + name_file + "pdf")
 
     # TODO
     """ LaTex """
     if (TEMPLATE == TEMPLATES[3]):
+        print("latex")
         os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
+
     #relaod_zathura(name_file)
 
 #eel.start('input_text.html', size=(1000, 600))

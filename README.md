@@ -22,8 +22,11 @@
 4. Install pdflatex
     sudo apt install texlive-full
 
-4. Install zathura (PDF Reader)
+5. Install zathura (PDF Reader)
     sudo apt install zathura
+
+6. Install texlive 
+    sudo apt-get install texlive-full
 
 [Modules]
 1. Install eel

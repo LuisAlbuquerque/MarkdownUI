@@ -6,7 +6,7 @@
  keywords: [Markdown, Example]
  subtitle: ""
  lang: "en"
- ...
+---
 
 \tableofcontents
 
