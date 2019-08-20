@@ -39,13 +39,30 @@ def relaod_zathura(name_file):
 
 @eel.expose
 def create_file(file_content):
-    #print(file_content)
+    print(file_content)
     name_file = "newfile." 
-    with open(name_file + "md","w+") as fd:
+    with open("web/markdowns/" + name_file + "md","w+") as fd:
         fd.write(file_content)
 
-    os.system("pandoc " + name_file + "md -o " + name_file + "pdf")
-    relaod_zathura(name_file)
+    """ DEFAULT """
+    if (TEMPLATE == TEMPLATES[0]):
+        os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
 
-eel.start('input_text.html', size=(1000, 600))
-#eel.start('chose_template.html', size=(1000, 600))
+    # TODO
+    """ Stylized PDF"""
+    if (TEMPLATE == TEMPLATES[1]):
+        os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
+
+    # TODO
+    """ Power Point PDF"""
+    if (TEMPLATE == TEMPLATES[2]):
+        os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
+
+    # TODO
+    """ LaTex """
+    if (TEMPLATE == TEMPLATES[3]):
+        os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
+    #relaod_zathura(name_file)
+
+#eel.start('input_text.html', size=(1000, 600))
+eel.start('chose_template.html', size=(1000, 600))

@@ -1,6 +1,7 @@
 function send_filejs() {
 	var file = document.getElementById("file_content").value
 	eel.create_file(file);
+        document.getElementById('pdf_frame').contentWindow.location.reload();
         //document.location.href = "chose_template.html";
         //window.location = "chose_template.html";
         //location.replace("https://www.w3schools.com")
