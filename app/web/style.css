@@ -7,8 +7,8 @@
 }
 
 body {
-    font-family: 'Cabin', sans-serif;
-    background-color: #fff;
+    font-family: 'Cab in', sans-serif;
+    background-color: #283541;
 }
 
 h1,
@@ -16,11 +16,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h3 {
     font-family: 'Cabin', sans-serif;
     font-weight: 400;
-    color: #000;
+    font-size: 50px;
+    color: #fff;
     line-height: 1.2;
+    text-align: center;
 }
 
 p {
@@ -47,7 +49,7 @@ p {
 }
 
 .wellcome_area {
-    background-image: url(img/bg-img/welcome-bg.png);
+    //background-image: url(img/bg-img/bg3.png);
     height: 500px;
     position: relative;
     z-index: 1;
@@ -65,8 +67,9 @@ p {
 
 
 .wellcome-heading > h2 {
-    font-size: 80px;
-    color: #ffffff;
+    font-size: 90px;
+    text-align: center;
+    color: #e9ecef;
     font-weight: 700;
     position: relative;
     z-index: 3;
@@ -108,7 +111,7 @@ p {
 }
 
 .get-start-area .submit {
-    background-color: #fb397d;
+    background-color: #0c5460;
     color: #fff;
     font-weight: 500;
     display: inline-block;
@@ -122,8 +125,9 @@ p {
 }
 
 .get-start-area .submit:hover {
-    background: #6f52e5;
-    color: #fff;
+    background: #fff;
+    color: #0c5460;
+    border: 5px solid;
     -webkit-transition-duration: 500ms;
     -o-transition-duration: 500ms;
     transition-duration: 500ms;

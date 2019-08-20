@@ -1,5 +1,14 @@
 # MARKDWON UI
 
+![](readme1.png)
+
+![](readme2.png)
+
+![](readme3.png)
+
+![](readme4.png)
+
+
 [Dep]
 1. Install python3 and pip
     sudo apt install python3-pip
