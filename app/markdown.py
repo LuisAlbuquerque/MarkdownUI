@@ -61,14 +61,15 @@ def create_file(file_content):
     if (TEMPLATE == TEMPLATES[1]):
         print("Stylized PDF")
         #os.system("pandoc -t html5 --css mdstyle.css web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
-        os.system("pandoc web/markdowns/"+name_file + "md -o web/pdfs/" + name_file + "pdf --from markdown --template eisvogel --listings")
+        os.system("pandoc web/markdowns/"+name_file + "md -o web/pdfs/" + name_file + "pdf --from markdown --template eisvogel.tex --listings")
 
     # TODO
     """ Power Point PDF"""
     if (TEMPLATE == TEMPLATES[2]):
         print("PP PDF")
         #os.system("pandoc web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
-        os.system("pandoc -t beamer web/markdowns/"+name_file + "md -o web/pdfs/" + name_file + "pdf")
+        #os.system("pandoc -t beamer web/markdowns/" + name_file + "md -o web/pdfs/" + name_file + "pdf")
+        os.system("pandoc -s -t beamer  -o web/pdfs/" + name_file + "pdf web/markdowns/" + name_file + "md -V theme:metropolis -V themeoptions:subsectionpage=progressbar")
 
     # TODO
     """ LaTex """
